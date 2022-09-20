@@ -18,7 +18,7 @@ public class OrderTO {
     public String toString() {
         return new ToStringBuilder(this)
                 .append("orderId", this.orderId)
-                .append("computers",this.dateOrder)
+                .append("dateOrder",this.dateOrder)
                 .append("computers",this.computers)
                 .toString();
     }

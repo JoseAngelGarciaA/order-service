@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.apache.commons.lang.builder.CompareToBuilder;
+import org.apache.commons.lang.builder.ToStringBuilder;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -41,5 +43,24 @@ public class ComputerDO implements Serializable {
 
     @Column(name = "order_id")
     private Integer orderId;
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("computerId", this.computerId)
+                .append("brand", this.brand)
+                .append("serialNumber", this.serialNumber)
+                .append("monitorId", this.monitorId)
+                .append("mouseId", this.mouseId)
+                .append("keyboardId", this.keyboardId)
+                .append("orderId", this.orderId)
+                .toString();
+    }
+    public int compareTo(ComputerDO o) {
+        return new CompareToBuilder().append(this.computerId, o.computerId).toComparison();
+    }
 
 }

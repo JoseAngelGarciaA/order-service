@@ -20,7 +20,7 @@ public class KeyboardDO implements Comparable<KeyboardDO>{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idkeyboard")
-    private Long idKeyboard;
+    private Integer idKeyboard;
 
     @Column(name = "brand")
     private String brand;
@@ -28,7 +28,7 @@ public class KeyboardDO implements Comparable<KeyboardDO>{
     @Column(name = "model")
     private String model;
 
-    @Column(name = "serialNumber")
+    @Column(name = "serial_number")
     private String serialNumber;
 
     /**
@@ -40,7 +40,7 @@ public class KeyboardDO implements Comparable<KeyboardDO>{
                 .append("idMonitor", this.idKeyboard)
                 .append("Brand", this.brand)
                 .append("Model", this.model)
-                .append("SerialNumber", this.serialNumber)
+                .append("Serial_Number", this.serialNumber)
                 .toString();
     }
     @Override

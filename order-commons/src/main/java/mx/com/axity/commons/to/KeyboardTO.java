@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Setter
 public class KeyboardTO implements Serializable {
 
-    private Long idKeyboard;
+    private Integer idKeyboard;
     private String brand;
     private String model;
     private String serialNumber;

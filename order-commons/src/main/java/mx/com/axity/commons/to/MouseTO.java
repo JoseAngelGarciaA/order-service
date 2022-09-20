@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Setter
 public class MouseTO implements Serializable{
 
-    private Long idMouse;
+    private Integer idMouse;
     private String brand;
     private String model;
     private String serialNumber;

@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import java.util.List;
 
-public class HelloControllerTest extends BaseTest {
+public class OrderControllerTest extends BaseTest {
 
     @Test
     public void exampleTest() {

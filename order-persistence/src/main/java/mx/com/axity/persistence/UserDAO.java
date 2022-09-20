@@ -2,9 +2,9 @@ package mx.com.axity.persistence;
 
 import mx.com.axity.model.UserDO;
 import org.springframework.data.repository.CrudRepository;
-import java.util.List;
 
-public interface UserDAO extends CrudRepository<UserDO, Long> {
+import java.util.Optional;
 
-    List<UserDO> findByLastName(String lastName);
+public interface UserDAO extends CrudRepository<UserDO, Integer> {
+    UserDO findById(int id);
 }

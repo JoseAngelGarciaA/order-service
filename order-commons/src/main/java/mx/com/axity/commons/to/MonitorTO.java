@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Setter
 public class MonitorTO implements Serializable{
 
-    private Long idMonitor;
+    private Integer idMonitor;
     private String brand;
     private String model;
     private String serialNumber;

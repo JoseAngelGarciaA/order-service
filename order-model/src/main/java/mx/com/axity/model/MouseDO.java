@@ -20,7 +20,7 @@ public class MouseDO implements Comparable<MouseDO> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idmouse")
-    private Long idMouse;
+    private Integer idMouse;
 
     @Column(name = "brand")
     private String brand;
@@ -28,7 +28,7 @@ public class MouseDO implements Comparable<MouseDO> {
     @Column(name = "model")
     private String model;
 
-    @Column(name = "serialNumber")
+    @Column(name = "serial_number")
     private String serialNumber;
 
     /**
@@ -40,7 +40,7 @@ public class MouseDO implements Comparable<MouseDO> {
                 .append("idMouse", this.idMouse)
                 .append("Brand", this.brand)
                 .append("Model", this.model)
-                .append("SerialNumber", this.serialNumber)
+                .append("Serial_Number", this.serialNumber)
                 .toString();
     }
     @Override

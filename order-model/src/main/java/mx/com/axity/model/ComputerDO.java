@@ -4,55 +4,42 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import javax.persistence.*;
-import org.apache.commons.lang.builder.CompareToBuilder;
-import org.apache.commons.lang.builder.ToStringBuilder;
+import java.io.Serializable;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 
 @Entity
 @Table(name = "computer", schema = "public")
-public class ComputerDO implements Comparable<ComputerDO>{
+public class ComputerDO implements Serializable {
+
+    private static final long serialVersionUID = 9178661439383356177L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idcomputer")
-    private Long idComputer;
+    @Column(name = "computer_id")
+    private Long computerId;
 
     @Column(name = "brand")
     private String brand;
 
-    @Column(name = "serialNumber")
+    @Column(name = "serial_number")
     private String serialNumber;
 
-    @Column(name = "idmonitor")
-    private Integer idMonitor;
+    @Column(name = "monitor_id")
+    private Integer monitorId;
 
-    @Column(name = "idmouse")
-    private Integer idMouse;
+    @Column(name = "mouse_id")
+    private Integer mouseId;
 
-    @Column(name = "idkeyboard")
-    private Integer idKeyboard;
+    @Column(name = "keyboard_id")
+    private Integer keyboardId;
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String toString() {
-        return new ToStringBuilder(this)
-                .append("idComputer", this.idComputer)
-                .append("Brand", this.brand)
-                .append("SerialNumber", this.serialNumber)
-                .append("idMonitor", this.idMonitor)
-                .append("idMouse", this.idMouse)
-                .append("idKeyboard", this.idKeyboard)
-                .toString();
-    }
-    @Override
-    public int compareTo(ComputerDO o) {
-        return new CompareToBuilder().append(this.idComputer, o.idComputer).toComparison();
-    }
+    @Column(name = "order_id")
+    private Integer orderId;
+
 }

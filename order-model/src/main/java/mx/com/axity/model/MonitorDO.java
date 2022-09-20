@@ -20,7 +20,7 @@ public class MonitorDO implements Comparable<MonitorDO>{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idmonitor")
-    private Long idMonitor;
+    private Integer idMonitor;
 
     @Column(name = "brand")
     private String brand;
@@ -28,7 +28,7 @@ public class MonitorDO implements Comparable<MonitorDO>{
     @Column(name = "model")
     private String model;
 
-    @Column(name = "serialNumber")
+    @Column(name = "serial_number")
     private String serialNumber;
 
     /**
@@ -40,7 +40,7 @@ public class MonitorDO implements Comparable<MonitorDO>{
                 .append("idMonitor", this.idMonitor)
                 .append("Brand", this.brand)
                 .append("Model", this.model)
-                .append("SerialNumber", this.serialNumber)
+                .append("Serial_Number", this.serialNumber)
                 .toString();
     }
     @Override
